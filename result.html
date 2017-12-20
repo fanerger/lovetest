@@ -28,11 +28,11 @@
   </body>
   <script type="text/javascript">
   function getRouteQuery () {
-    let searchStr = window.location.search.slice(1)
-    let searchArr = searchStr.split('&')
-    let query = {}
-    for (let i = 0; i < searchArr.length; i++) {
-      let item = searchArr[i].split('=')
+    var searchStr = window.location.search.slice(1)
+    var searchArr = searchStr.split('&')
+    var query = {}
+    for (var i = 0; i < searchArr.length; i++) {
+      var item = searchArr[i].split('=')
       query[item[0]] = item[1]
     }
     return query
