@@ -21,11 +21,11 @@
     <div style="display:none"><img src="./assets/img/logo.jpg"></div>
     <div class="page1" id="app">
       <h3 class="title">恋爱类型测评</h3>
-      <p class="p">恋爱类型，藏在我们的潜意识中，对我们择偶观念和行为产生极大影响。</p>
-      <p class="p">你知道你的恋爱类型吗？由10位权威心理学家集体研发的《恋爱类型测评》，深度解读你的恋爱类型倾向、推荐你适合的恋爱对象类型，帮助你遇见自己，遇见爱。</p>
-      <p class="p border-p">测试须知：请按你在爱情中的真实表现和感受作答。</p>
+      <p class="p" v-if="!start">恋爱类型，藏在我们的潜意识中，对我们择偶观念和行为产生极大影响。</p>
+      <p class="p" v-if="!start">你知道你的恋爱类型吗？由10位权威心理学家集体研发的《恋爱类型测评》，深度解读你的恋爱类型倾向、推荐你适合的恋爱对象类型，帮助你遇见自己，遇见爱。</p>
+      <p class="p border-p" v-if="!start">测试须知：请按你在爱情中的真实表现和感受作答。</p>
       <button type="button" class="btn" name="button" @click="start=true" v-if="!start">开始答题</button>
-      <div class="slide-wrap" v-else>
+      <div class="slide-wrap" v-if="start">
         <ul class="qustion-ul" :style="'margin-top:'+marginTop+'rem'">
           <li class="qustion" v-for="item,index in questions">
             <p class="qustion-name">{{item.name}}</p>
@@ -45,7 +45,7 @@
         this.questions[index]['val'] = val
         if (this.active < this.questions.length - 1) {
           this.active++
-          this.marginTop = -(this.active*4)
+          this.marginTop = -(this.active*5)
         } else {
           var arr = this.questions
           var type1=0,type2=0,type3=0,type4=0,type5=0,type6=0
