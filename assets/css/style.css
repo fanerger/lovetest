@@ -12,8 +12,9 @@ html,body{
 }
 .page1 .title{
   text-align: center;
-  font-size: .32rem;
+  font-size: .36rem;
   padding: .2rem 0;
+  margin-bottom: .3rem;
 }
 .page1 .btn{
   display: block;
@@ -28,33 +29,32 @@ html,body{
   outline: none;
 }
 .border-p{
-  border-bottom: 1px solid pink;
   padding-bottom: .2rem;
   margin-bottom: .2rem;
 }
 .slide-wrap{
-
   overflow: hidden;
-  height: 4rem;
+  height: 5rem;
 }
 .slide-wrap .qustion-ul{
   transition: all .6s;
 }
 .slide-wrap .qustion{
-  height: 4rem;
-  /* background: #fff; */
+  line-height: .5rem;
 }
 .slide-wrap .qustion-name{
   font-size: .3rem;
+  height: 1rem;
+  line-height: .4rem;
 }
 .p{
   text-indent: 2em;
 }
 .radio-ul{
-  margin-top: .3rem;
+  height: 4rem;
 }
 .radio-ul li{
-  line-height: .6rem;
+  line-height: .8rem;
   border-top: 1px solid #fff;
   padding-left: .5rem;
 }
