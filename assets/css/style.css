@@ -13,7 +13,7 @@ html,body{
 .page1 .title{
   text-align: center;
   font-size: .36rem;
-  padding: .2rem 0;
+  padding: .7rem 0 .3rem;
   margin-bottom: .3rem;
 }
 .page1 .btn{
@@ -48,6 +48,10 @@ html,body{
   height: 1rem;
   line-height: .4rem;
 }
+.page1 .p{
+  line-height: .5rem;
+  margin-bottom: .1rem;
+}
 .p{
   text-indent: 2em;
 }
@@ -67,7 +71,7 @@ html,body{
   padding: 0 .2rem;
   box-sizing: border-box;
   margin: 0 auto;
-  min-height: 100%;
+  height: 100%;
   background: url(../img/bg1.jpg) no-repeat center top;
   background-size: cover;
 }
