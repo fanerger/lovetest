@@ -31,7 +31,7 @@
             <p class="qustion-name">{{item.name}}</p>
             <ul class="radio-ul">
               <li v-for="li in radios" :class="{'active':item.val == li.val}" @click="choose(index,li.val)">
-                <input type="radio" name="" value="" style="transform: scale(1.2,1.2);"> {{li.label}}
+                <input type="radio" name="" value=""> {{li.label}}
               </li>
             </ul>
           </li>
