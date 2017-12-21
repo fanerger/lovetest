@@ -117,7 +117,7 @@ html,body{
   font-size: .24rem;
 }
 .share-mask{
-  width: 6.4rem;
+  width: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
