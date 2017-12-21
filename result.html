@@ -18,12 +18,23 @@
     <script src="./assets/js/vue.min.js"></script>
   </head>
   <body>
-    <div style="display:none"><img src="./assets/img/logo.jpg"></div>
     <div class="page2" id="result">
       <div class="top">— 您的测试结果 —</div>
       <h3 class="title">{{result.name}}</h3>
       <p class="p">从本次测评结果上看，你的恋爱类型倾向于“{{result.name}}”。</p>
       <p class="p">{{result.val}}</p>
+      <div class="btns">
+        <a href="./index.html">再试一次</a>
+        <a class="share-btn" @click="showMask=true">分享给好友</a>
+      </div>
+      <div class="love-desc">
+        关注简爱，遇见自己，遇见爱
+      </div>
+      <div class="qr-code">
+        <img src="./assets/img/qr_code.jpg">
+      </div>
+      <p class="code-txt">长按识别二维码关注</p>
+      <div class="share-mask" v-show="showMask" @click="showMask=false"></div>
     </div>
   </body>
   <script type="text/javascript">
@@ -37,11 +48,11 @@
     }
     return query
   }
-  console.log(getRouteQuery().type)
   var app = new Vue({
     el: '#result',
     data: function () {
       return {
+        showMask: false,
         result: {},
         type: getRouteQuery().type || 'type1',
         list: [
